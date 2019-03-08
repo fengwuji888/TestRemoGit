@@ -18,6 +18,9 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor redColor];
+    
+    // 重新改变控制器的颜色
+    self.view.backgroundColor = [UIColor blueColor];
 }
 
 
