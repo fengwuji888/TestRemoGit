@@ -25,6 +25,10 @@
     
     // 我是主分支添加的注释
     self.view.backgroundColor = [UIColor cyanColor];
+    
+    
+    // 添加一个oneBrach分支代码
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 
