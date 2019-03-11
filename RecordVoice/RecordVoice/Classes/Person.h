@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *email;
 
+// one开发者添加了一个年龄
+@property (nonatomic, assign) NSInteger age;
+
 @end
 
 NS_ASSUME_NONNULL_END
