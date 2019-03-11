@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 // one开发者添加了一个年龄
 @property (nonatomic, assign) NSInteger age;
 
+// 添加一个属性
+@property (nonatomic, strong) NSMutableArray *teams;
+
 @end
 
 NS_ASSUME_NONNULL_END
