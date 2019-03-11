@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D9C3C0A22363031007811D7 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C3C0922363031007811D7 /* Person.m */; };
 		4DAC5AC92231FCFE004AACBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC5AC82231FCFE004AACBC /* AppDelegate.m */; };
 		4DAC5ACC2231FCFE004AACBC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAC5ACB2231FCFE004AACBC /* ViewController.m */; };
 		4DAC5ACF2231FCFE004AACBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAC5ACD2231FCFE004AACBC /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D9C3C0822363031007811D7 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		4D9C3C0922363031007811D7 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		4DAC5AC42231FCFE004AACBC /* RecordVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAC5AC72231FCFE004AACBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4DAC5AC82231FCFE004AACBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D9C3C0722363020007811D7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4D9C3C0822363031007811D7 /* Person.h */,
+				4D9C3C0922363031007811D7 /* Person.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		4DAC5ABB2231FCFE004AACBC = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 		4DAC5AC62231FCFE004AACBC /* RecordVoice */ = {
 			isa = PBXGroup;
 			children = (
+				4D9C3C0722363020007811D7 /* Classes */,
 				4DAC5AC72231FCFE004AACBC /* AppDelegate.h */,
 				4DAC5AC82231FCFE004AACBC /* AppDelegate.m */,
 				4DAC5ACA2231FCFE004AACBC /* ViewController.h */,
@@ -205,6 +218,7 @@
 			files = (
 				4DAC5ACC2231FCFE004AACBC /* ViewController.m in Sources */,
 				4DAC5AD72231FD00004AACBC /* main.m in Sources */,
+				4D9C3C0A22363031007811D7 /* Person.m in Sources */,
 				4DAC5AC92231FCFE004AACBC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
