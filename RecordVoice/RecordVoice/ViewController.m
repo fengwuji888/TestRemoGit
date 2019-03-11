@@ -21,6 +21,10 @@
     
     // 重新改变控制器的颜色
     self.view.backgroundColor = [UIColor blueColor];
+    
+    
+    // 我是主分支添加的注释
+    self.view.backgroundColor = [UIColor cyanColor];
 }
 
 
