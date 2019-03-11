@@ -29,6 +29,10 @@
     
     // 添加一个oneBrach分支代码
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    // 我是one开发者
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 
