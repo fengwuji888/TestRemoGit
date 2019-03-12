@@ -8,7 +8,15 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MyFirstSwiftTableViewCellDelegate{
+    
+    // 按钮点击事件的代理方法
+    func btnBeClicke(cell: MyFirstSwiftTableViewCell, indexPath: NSIndexPath) {
+    
+        print(indexPath)
+        
+    }
+    
     
     // 定义一个属性，后面要添加一个问号
     var tableView : UITableView?
@@ -27,6 +35,17 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.view.addSubview(tableView!)
         tableView?.delegate = self
         tableView?.dataSource = self
+        
+        // 注册监听通知
+        let notificationName = Notification.Name(rawValue: "OneSwiftNoti")
+        NotificationCenter.default.addObserver(self,selector:#selector(downloadImage(notification:)), name: notificationName, object: nil)
+    }
+    
+    // MARK:-通知的回调
+    @objc func downloadImage(notification: Notification) {
+        
+        print("receive noti!!!")
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -52,8 +71,9 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-       let cell = MyFirstSwiftTableViewCell.cellWithTableView(tableView)
-      
+        let cell = MyFirstSwiftTableViewCell.cellWithTableView(tableView)
+        cell.indexPath = indexPath as NSIndexPath
+        cell.delegate = self
         return cell
     }
     
