@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "RecordVoice-Swift.h"
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+
 
 @interface ViewController ()
+
+- (IBAction)skipLoginVc:(UIButton *)sender;
 
 @end
 
@@ -32,8 +38,15 @@
     
     
     // 我是one开发者
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor cyanColor];
 }
 
 
+- (IBAction)skipLoginVc:(UIButton *)sender {
+    
+    LoginViewController *loginVc = [[LoginViewController alloc] init];
+    
+    [self presentViewController:loginVc animated:YES completion:nil];
+    
+}
 @end
