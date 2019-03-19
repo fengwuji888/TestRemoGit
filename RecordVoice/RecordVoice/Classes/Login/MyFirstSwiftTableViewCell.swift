@@ -25,6 +25,12 @@ class MyFirstSwiftTableViewCell: UITableViewCell {
     
     weak var delegate: MyFirstSwiftTableViewCellDelegate?
     
+    // 懒加载数组
+    lazy var dataArray:[TestModel] = {
+        () -> [TestModel] in
+        return [TestModel.shareInstance()]
+    }()
+    
     // 懶加載一個視圖
     lazy var rightPic:UIImageView = {
         
@@ -43,6 +49,7 @@ class MyFirstSwiftTableViewCell: UITableViewCell {
     
     // MARK:- 初始化视图
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         
         self.addSubview(rightPic)
@@ -50,6 +57,7 @@ class MyFirstSwiftTableViewCell: UITableViewCell {
         // 为按钮添加点击事件
         myBtn.addTarget(self, action: #selector(btnClicked), for: .touchUpInside)
         
+        print(self.dataArray)
     }
 
     @objc func btnClicked(btn : UIButton) {
@@ -62,15 +70,17 @@ class MyFirstSwiftTableViewCell: UITableViewCell {
         
         // 发送通知
         NotificationCenter.default.post(name: NSNotification.Name("OneSwiftNoti"), object: nil)
+        
+        // 多重条件判断
+        if 1 == 1, 2==2, 3==4 {
+            
+        }
     }
     
     
     func setModel(model:Person) {
         
-        self.textLabel?.text = model.name
-        
-        
-        
+        self.textLabel?.text = model.name  
     }
     
     static func cellWithTableView(_ tableView: UITableView) -> MyFirstSwiftTableViewCell {

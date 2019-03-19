@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MyFirstSwiftTableViewCellDelegate{
+class LoginViewController: UIViewController, MyFirstSwiftTableViewCellDelegate{
     
     // 按钮点击事件的代理方法
     func btnBeClicke(cell: MyFirstSwiftTableViewCell, indexPath: NSIndexPath) {
@@ -55,6 +55,11 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+
+// MARK:- tableView代理
+extension LoginViewController : UITableViewDelegate, UITableViewDataSource {
     
     // tableView代理方法
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -68,7 +73,7 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-  
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = MyFirstSwiftTableViewCell.cellWithTableView(tableView)
